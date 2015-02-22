@@ -1,6 +1,6 @@
 module.exports = {
 
-    development: {
+    dev: {
         connectionString: 'mongodb://localhost/mysite',
 
         options: {
@@ -10,18 +10,7 @@ module.exports = {
                 }
             }
         }
-    },
-
-    live: {
-        connectionString: 'todo',
-
-        options: {
-            server: {
-                socketOptions: {
-                    keepAlive: 1
-                }
-            }
-        }
     }
+
 };
 

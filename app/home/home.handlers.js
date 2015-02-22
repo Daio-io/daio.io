@@ -2,8 +2,8 @@ exports.getHome = function *() {
 
     yield this.render("home", {
 
-        title: 'Koa Skeleton',
-        welcomeMessage: 'Home page'
+        title: 'Header Placeholder',
+        welcomeMessage: 'Building..'
 
     });
 

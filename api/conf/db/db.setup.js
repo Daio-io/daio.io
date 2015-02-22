@@ -5,6 +5,6 @@ var config = require('./db.config');
 
 module.exports = function () {
 
-    mongoose.connect(config.development.connectionString, config.development.options);
+    mongoose.connect(config.dev.connectionString, config.dev.options);
 
 };
