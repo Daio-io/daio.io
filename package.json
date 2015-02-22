@@ -1,7 +1,7 @@
 {
-  "name": "koa-skeleton",
+  "name": "Daio.IO",
   "version": "0.0.1",
-  "description": "A simple Koa framework skeleton to use with io.js",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,14 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Daveloper87/koa-skeleton.git"
+    "url": "git@github.com:Daveloper87/daio.io.git"
   },
   "author": "Daveloper87",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Daveloper87/koa-skeleton/issues"
-  },
-  "homepage": "https://github.com/Daveloper87/koa-skeleton",
   "dependencies": {
     "koa": "^0.18.0",
     "koa-handlebars": "^0.5.0",
