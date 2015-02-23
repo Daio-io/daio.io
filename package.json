@@ -21,5 +21,8 @@
     "koa-router": "^4.1.0",
     "koa-static": "^1.4.9",
     "mongoose": "^3.8.23"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
   }
 }
