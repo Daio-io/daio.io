@@ -1,7 +1,7 @@
 {
   "name": "Daio.IO",
   "version": "0.0.1",
-  "description": "",
+  "description": "New website using io.js, Koa, Semantic UI and Handlebars",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,7 +26,7 @@
     "browserify": "^9.0.3",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
-    "vinyl-source-stream": "^1.0.0"
+    "vinyl-source-stream": "^1.0.0",
     "gulp": "^3.8.11"
   }
 }
