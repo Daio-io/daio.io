@@ -10,3 +10,6 @@ logs
 # Modules
 node_modules
 
+# Bundles
+public/js/bundle.js
+

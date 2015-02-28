@@ -2,7 +2,7 @@ exports.getHome = function *() {
 
     yield this.render("home", {
 
-        title: 'Header Placeholder',
+        title: 'Daio.IO',
         welcomeMessage: 'Building..'
 
     });
