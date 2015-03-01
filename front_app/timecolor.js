@@ -5,7 +5,7 @@ var TimeColour = Object.create(Object);
 
 TimeColour.run = function (elementId, timeInterval) {
 
-    $('.' + elementId).css({"transition": "all 0.8s", "-webkit-transition": "all 0.8s"});
+    $('#' + elementId).css({"transition": "all 0.8s", "-webkit-transition": "all 0.8s"});
     var timeHex = this.getHexFromTime();
     this.setColourOnDomElement(elementId, timeHex);
 
@@ -34,7 +34,7 @@ TimeColour.prototype.getHexFromTime = function () {
 
 TimeColour.prototype.setColourOnDomElement = function(elementId, hexCode){
 
-    $('.' + elementId).css("background-color", hexCode);
+    $('#' + elementId).css("background-color", hexCode);
 
 };
 
