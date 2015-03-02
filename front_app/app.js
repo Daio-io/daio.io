@@ -1,3 +1,3 @@
 'use strict';
 
-global.timeColour = require('./timecolor.js');
+global.timeColour = require('./lib/timecolor.js');
