@@ -2,6 +2,6 @@
 
 exports.getProjects = function* () {
   
-    this.body = JSON.stringify({hello: "hello"});
+    this.body = {hello: "hello"};
     
 };

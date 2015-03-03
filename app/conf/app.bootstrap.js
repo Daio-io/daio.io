@@ -1,6 +1,7 @@
 var hbs = require('koa-handlebars');
 var settings = require('./app.settings');
 var koaBody = require('koa-body');
+var koaJson = require('koa-json');
 
 module.exports = function (app) {
 
@@ -15,5 +16,6 @@ module.exports = function (app) {
     ));
     
     app.use(koaBody());
+    app.use(koaJson());
 
 };
