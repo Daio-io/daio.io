@@ -1,3 +1,5 @@
+'use strict';
+
 var projectHandlers = require('./project.handlers');
 var router = require('koa-router')();
 
