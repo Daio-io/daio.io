@@ -11,5 +11,5 @@ logs
 node_modules
 
 # Bundles
-public/js/bundle.js
+public/js/*.js
 

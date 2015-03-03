@@ -1,0 +1,5 @@
+{
+    "help": "Displays this list of available tasks",
+    "bundle": "Builds the client side Javascript into the public folder",
+    "clean": "Deletes all currently built client side bundles from the public folder"
+}
