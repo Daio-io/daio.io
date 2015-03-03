@@ -1,5 +1,6 @@
 var hbs = require('koa-handlebars');
 var settings = require('./app.settings');
+var koaBody = require('koa-body');
 
 module.exports = function (app) {
 
@@ -12,5 +13,7 @@ module.exports = function (app) {
             cache: settings.templateCache
         }
     ));
+    
+    app.use(koaBody());
 
 };
