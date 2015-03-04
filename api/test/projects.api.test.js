@@ -67,6 +67,24 @@ describe('Projects API Tests', function () {
         });
 
     });
+
+
+    xit('should return 0 projects when id does not exist', function (done) {
+
+        var madeUpID = '12312dsd';
+
+        req.get('/project/' + madeUpID).on('success', function (data) {
+
+            expect(data).to.be.an('object');
+            expect(data.status).to.eql('failed');
+            expect(data.message).to.exist;
+
+            done();
+
+
+        });
+
+    });
     
     xit('should return failed if invalid data is sent', function (done) {
 
@@ -115,6 +133,6 @@ describe('Projects API Tests', function () {
         });
 
     });
-    
+
     
 });

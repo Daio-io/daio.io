@@ -44,5 +44,4 @@ exports.deleteByID = function *() {
 
     this.body = {status: removed, message: removed + ' Projects deleted'}
 
-
 };
