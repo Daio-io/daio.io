@@ -5,6 +5,7 @@ const BASE_URL = process.env.TEST_URL || 'http://localhost:3000';
 var expect = require('chai').expect;
 var RequestHelper = require('./helpers/request.helper');
 var projectStub = require('./stubs/project.stub');
+var invalidStub = require('./stubs/invalid.stub');
 var fakeId;
 
 var req;
@@ -59,6 +60,54 @@ describe('Projects API Tests', function () {
             expect(data.projectURL).to.eql(projectStub.projectURL);
             expect(data.platform).to.eql(projectStub.platform);
             expect(data.imageURL).to.eql(projectStub.imageURL);
+
+            done();
+
+
+        });
+
+    });
+    
+    xit('should return failed if invalid data is sent', function (done) {
+
+        req.post('/project', invalidStub).on('success', function (data) {
+
+            expect(data).to.be.an('object');
+            expect(data.status).to.eql('failed');
+            expect(data.message).to.eql('Missing or invalid data');
+
+            done();
+
+
+        });
+
+    });    
+    
+    it('should return the number of projects deleted on del request', function (done) {
+
+        req.delete('/project/' + fakeId).on('success', function (data) {
+
+            expect(data).to.be.an('object');
+            expect(data.status).to.eql(1);
+            expect(data.message).to.exist;
+
+            done();
+
+
+        });
+
+    });
+    
+        
+    xit('should return 0 when project has not been deleted', function (done) {
+        
+        var madeUpID = '12312dsd';
+
+        req.delete('/project/' + madeUpID).on('success', function (data) {
+
+            expect(data).to.be.an('object');
+            expect(data.status).to.eql(0);
+            expect(data.message).to.exist;
 
             done();
 
