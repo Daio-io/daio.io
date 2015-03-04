@@ -22,7 +22,7 @@
     "koa-json": "^1.1.1",
     "koa-router": "^4.1.0",
     "koa-static": "^1.4.9",
-    "mongoose": "^3.8.23"
+    "mongoose": "^3.9.7"
   },
   "devDependencies": {
     "browserify": "^9.0.3",

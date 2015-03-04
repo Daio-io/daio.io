@@ -1,3 +1,5 @@
+'use strict';
+
 var homeRoutes = require('../home/home.router');
 var projectRoutes = require('../../api/project/project.router');
 
