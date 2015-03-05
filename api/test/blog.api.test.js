@@ -40,6 +40,8 @@ describe('Blog API Tests', function () {
             for (var i = 0; i < data.length; i ++){
                 expect(data[i]).to.be.an('object');
                 expect(data[i]._id).to.exist;
+                expect(data[i].title).to.exist;
+                expect(data[i].full).to.exist;
             }
 
             done();
@@ -56,6 +58,9 @@ describe('Blog API Tests', function () {
             expect(data).to.be.an('object');
             expect(data._id).to.exist;
             expect(data.title).to.eql(blogStub.title);
+            expect(data.full).to.eql(blogStub.full);
+            expect(data.short).to.eql(blogStub.short);
+            expect(data.date).to.exist;
             done();
 
 
