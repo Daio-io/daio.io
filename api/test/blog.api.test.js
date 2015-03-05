@@ -1,6 +1,6 @@
 'use strict';
 
-const BASE_URL = process.env.TEST_URL || 'http://localhost:3000';
+const BASE_URL = process.env.TEST_URL || 'http://localhost:3000/api';
 
 var expect = require('chai').expect;
 var RequestHelper = require('./helpers/request.helper');
