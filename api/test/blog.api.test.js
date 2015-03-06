@@ -69,15 +69,15 @@ describe('Blog API Tests', function () {
     });
 
 
-    xit('should return 0 blogposts when id does not exist', function (done) {
+    it('should return failed when id does not exist', function (done) {
 
         var madeUpID = '12312dsd';
 
-        req.get('/blogpost/' + madeUpID).on('success', function (data) {
+        req.get('/blogpost/' + madeUpID).on('complete', function (data) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
-            expect(data.message).to.exist;
+            expect(data.message).to.eql('Invalid request');
 
             done();
 
@@ -117,15 +117,15 @@ describe('Blog API Tests', function () {
     });
 
 
-    xit('should return 0 when blogpost has not been deleted', function (done) {
+    it('should return failed when blogpost id to be deleted is not found', function (done) {
 
         var madeUpID = '12312dsd';
 
-        req.delete('/blogpost/' + madeUpID).on('success', function (data) {
+        req.delete('/blogpost/' + madeUpID).on('complete', function (data) {
 
             expect(data).to.be.an('object');
-            expect(data.status).to.eql(0);
-            expect(data.message).to.exist;
+            expect(data.status).to.eql('failed');
+            expect(data.message).to.eql('Invalid request');
 
             done();
 

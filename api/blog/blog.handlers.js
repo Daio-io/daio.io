@@ -14,19 +14,26 @@ exports.getBlogPostById = function *() {
 
     var id = this.params.id;
 
-    var response = yield BlogPost.findById(id).exec();
+    try {
+        var response = yield BlogPost.findById(id).exec();
 
-    var res = {
-        
-        _id: response._id,
-        title : response.title,
-        short : response.short,
-        full : response.full,
-        date: response.getDateCreated()
+        var res = {
 
-    };
+            _id: response._id,
+            title: response.title,
+            short: response.short,
+            full: response.full,
+            date: response.getDateCreated()
 
-    this.body = res;
+        };
+
+        this.body = res;
+    } catch (err) {
+
+        this.status = 400;
+        this.body = {status: 'failed', message: 'Invalid request'}
+    }
+
 
 };
 
@@ -52,8 +59,16 @@ exports.deleteByID = function *() {
 
     var id = this.params.id;
 
-    var removed = yield BlogPost.remove({ _id: id }).exec();
+    try {
+        var removed = yield BlogPost.remove({_id: id}).exec();
 
-    this.body = {status: removed, message: removed + ' Projects deleted'}
+        this.body = {status: removed, message: removed + ' Projects deleted'}
+    }
+    catch (err) {
+
+        this.status = 400;
+        this.body = {status: 'failed', message: 'Invalid request'}
+        
+    }
 
 };
