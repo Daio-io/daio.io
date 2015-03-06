@@ -1,18 +1,20 @@
+'use strict';
+
 var Project = require('./project.model');
 
 exports.getProjects = function *() {
 
-    var response = yield Project.find().exec();
+    let response = yield Project.find().exec();
     this.body = response;
 
 };
 
 exports.getProjectById = function *() {
 
-    var id = this.params.id;
+    let id = this.params.id;
 
     try {
-        var response = yield Project.findById(id).exec();
+        let response = yield Project.findById(id).exec();
         this.body = response;
     } catch (err) {
         this.status = 400;
@@ -23,8 +25,8 @@ exports.getProjectById = function *() {
 
 exports.postProject = function *() {
 
-    body = this.request.body;
-    var project = new Project({
+    let body = this.request.body;
+    let project = new Project({
 
         name: body.name,
         description: body.description,
@@ -35,7 +37,7 @@ exports.postProject = function *() {
     });
 
     try {
-        var saved = yield project.save();
+        let saved = yield project.save();
 
         this.body = {id: saved._id, status: 'success'}
     }
@@ -52,10 +54,10 @@ exports.postProject = function *() {
 
 exports.deleteByID = function *() {
 
-    var id = this.params.id;
+    let id = this.params.id;
 
     try {
-        var removed = yield Project.remove({_id: id}).exec();
+        let removed = yield Project.remove({_id: id}).exec();
 
         this.body = {status: removed, message: removed + ' Projects deleted'}
     }

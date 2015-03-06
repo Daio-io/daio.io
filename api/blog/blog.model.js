@@ -3,9 +3,9 @@
 var mongoose = require('mongoose');
 var blogPostSchema = mongoose.Schema({
 
-    title: { type: String, required: true },
+    title: { type: String, required: false },
     short: { type: String },
-    full: { type: String, required: true }
+    full: { type: String, required: false }
 });
 
 blogPostSchema.methods.getDateCreated = function () {

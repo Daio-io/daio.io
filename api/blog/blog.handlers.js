@@ -4,7 +4,7 @@ var BlogPost = require('./blog.model');
 
 exports.getBlogPosts = function *() {
 
-    var response = yield BlogPost.find().exec();
+    let response = yield BlogPost.find().exec();
 
     this.body = response;
 
@@ -12,12 +12,12 @@ exports.getBlogPosts = function *() {
 
 exports.getBlogPostById = function *() {
 
-    var id = this.params.id;
+    let id = this.params.id;
 
     try {
-        var response = yield BlogPost.findById(id).exec();
+        let response = yield BlogPost.findById(id).exec();
 
-        var res = {
+        this.body = {
 
             _id: response._id,
             title: response.title,
@@ -27,7 +27,6 @@ exports.getBlogPostById = function *() {
 
         };
 
-        this.body = res;
     } catch (err) {
 
         this.status = 400;
@@ -39,8 +38,8 @@ exports.getBlogPostById = function *() {
 
 exports.postBlog = function *() {
 
-    var body = this.request.body;
-    var blogPost = new BlogPost({
+    let body = this.request.body;
+    let blogPost = new BlogPost({
 
         title: body.title,
         short: body.short,
@@ -48,19 +47,18 @@ exports.postBlog = function *() {
 
     });
 
-    var saved = yield blogPost.save();
+    let saved = yield blogPost.save();
 
     this.body = {id: saved._id, status: 'success'}
-
 
 };
 
 exports.deleteByID = function *() {
 
-    var id = this.params.id;
+    let id = this.params.id;
 
     try {
-        var removed = yield BlogPost.remove({_id: id}).exec();
+        let removed = yield BlogPost.remove({_id: id}).exec();
 
         this.body = {status: removed, message: removed + ' Projects deleted'}
     }

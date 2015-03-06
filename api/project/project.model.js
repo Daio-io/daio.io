@@ -3,10 +3,10 @@
 var mongoose = require('mongoose');
 var projectSchema = mongoose.Schema({
 
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    projectURL: { type: String, required: true },
-    platform: { type: String, required: true },
+    name: { type: String, required: false },
+    description: { type: String, required: false },
+    projectURL: { type: String, required: false },
+    platform: { type: String, required: false },
     imageURL: String
 
 });
