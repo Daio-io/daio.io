@@ -73,12 +73,12 @@ describe('Blog API Tests', function () {
 
         var madeUpID = '12312dsd';
 
-        req.get('/blogpost/' + madeUpID).on('complete', function (data) {
+        req.get('/blogpost/' + madeUpID).on('complete', function (data, response) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
             expect(data.message).to.eql('Invalid request');
-
+            expect(response.statusCode).to.eql(400);
             done();
 
 
@@ -121,11 +121,12 @@ describe('Blog API Tests', function () {
 
         var madeUpID = '12312dsd';
 
-        req.delete('/blogpost/' + madeUpID).on('complete', function (data) {
+        req.delete('/blogpost/' + madeUpID).on('complete', function (data, response) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
             expect(data.message).to.eql('Invalid request');
+            expect(response.statusCode).to.eql(400);
 
             done();
 

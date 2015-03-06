@@ -73,12 +73,12 @@ describe('Projects API Tests', function () {
 
         var madeUpID = '12312dsd';
 
-        req.get('/project/' + madeUpID).on('complete', function (data) {
+        req.get('/project/' + madeUpID).on('complete', function (data, response) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
             expect(data.message).to.eql('Invalid request');
-
+            expect(response.statusCode).to.eql(400);
             done();
 
 
@@ -121,11 +121,12 @@ describe('Projects API Tests', function () {
         
         var madeUpID = '12312dsd';
 
-        req.delete('/project/' + madeUpID).on('complete', function (data) {
+        req.delete('/project/' + madeUpID).on('complete', function (data, response) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
             expect(data.message).to.eql('Invalid request');
+            expect(response.statusCode).to.eql(400);
 
             done();
 
