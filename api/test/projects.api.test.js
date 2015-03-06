@@ -69,15 +69,15 @@ describe('Projects API Tests', function () {
     });
 
 
-    xit('should return 0 projects when id does not exist', function (done) {
+    it('should return failed projects when id does not exist', function (done) {
 
         var madeUpID = '12312dsd';
 
-        req.get('/project/' + madeUpID).on('success', function (data) {
+        req.get('/project/' + madeUpID).on('complete', function (data) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
-            expect(data.message).to.exist;
+            expect(data.message).to.eql('Invalid request');
 
             done();
 
@@ -88,11 +88,11 @@ describe('Projects API Tests', function () {
     
     xit('should return failed if invalid data is sent', function (done) {
 
-        req.post('/project', invalidStub).on('success', function (data) {
+        req.post('/project', invalidStub).on('complete', function (data) {
 
             expect(data).to.be.an('object');
             expect(data.status).to.eql('failed');
-            expect(data.message).to.eql('Missing or invalid data');
+            expect(data.message).to.exist
 
             done();
 
@@ -117,15 +117,15 @@ describe('Projects API Tests', function () {
     });
     
         
-    xit('should return 0 when project has not been deleted', function (done) {
+    it('should return failed when project id to deleted does not exist', function (done) {
         
         var madeUpID = '12312dsd';
 
-        req.delete('/project/' + madeUpID).on('success', function (data) {
+        req.delete('/project/' + madeUpID).on('complete', function (data) {
 
             expect(data).to.be.an('object');
-            expect(data.status).to.eql(0);
-            expect(data.message).to.exist;
+            expect(data.status).to.eql('failed');
+            expect(data.message).to.eql('Invalid request');
 
             done();
 

@@ -11,8 +11,13 @@ exports.getProjectById = function *() {
 
     var id = this.params.id;
 
-    var response = yield Project.findById(id).exec();
-    this.body = response;
+    try {
+        var response = yield Project.findById(id).exec();
+        this.body = response;
+    } catch (err) {
+        this.status = 400;
+        this.body = {status: 'failed', message: 'Invalid request'}
+    }
 
 };
 
@@ -29,9 +34,18 @@ exports.postProject = function *() {
 
     });
 
-    var saved = yield project.save();
+    try {
+        var saved = yield project.save();
 
-    this.body = {id: saved._id, status: 'success'}
+        this.body = {id: saved._id, status: 'success'}
+    }
+    catch (err) {
+
+        this.status = 400;
+        this.body = {status: 'failed', message: 'Invalid request: ' + err.path}
+
+    }
+
 
 
 };
@@ -40,8 +54,16 @@ exports.deleteByID = function *() {
 
     var id = this.params.id;
 
-    var removed = yield Project.remove({ _id: id }).exec();
+    try {
+        var removed = yield Project.remove({_id: id}).exec();
 
-    this.body = {status: removed, message: removed + ' Projects deleted'}
+        this.body = {status: removed, message: removed + ' Projects deleted'}
+    }
+    catch (err) {
+
+        this.status = 400;
+        this.body = {status: 'failed', message: 'Invalid request'}
+
+    }
 
 };
