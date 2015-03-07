@@ -40,8 +40,6 @@ describe('Blog API Tests', function () {
             for (var i = 0; i < data.length; i ++){
                 expect(data[i]).to.be.an('object');
                 expect(data[i]._id).to.exist;
-                expect(data[i].title).to.exist;
-                expect(data[i].full).to.exist;
             }
 
             done();
@@ -86,7 +84,7 @@ describe('Blog API Tests', function () {
 
     });
 
-    xit('should return failed if invalid data is sent', function (done) {
+    it('should return failed if invalid data is sent', function (done) {
 
         req.post('/blogpost', invalidStub).on('success', function (data) {
 
