@@ -7,7 +7,7 @@
     <title>{{title}}</title>
 </head>
 
-<body>
+<body onload="timeColour.run('jumbotron')">
 
 <div id="content" class="ui page grid">
     <div class="row">
@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="center aligned column">
+        <div class="column">
             {{{@body}}}
         </div>
     </div>

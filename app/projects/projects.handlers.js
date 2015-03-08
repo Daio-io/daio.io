@@ -4,7 +4,7 @@ exports.getProj = function *() {
 
     yield this.render("projects", {
 
-        title: 'Daio.IO - Projects',
+        title: 'Projects',
         welcomeMessage: 'Project Page..'
 
     });
