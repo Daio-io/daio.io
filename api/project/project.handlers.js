@@ -30,9 +30,10 @@ exports.postProject = function *() {
 
         name: body.name,
         description: body.description,
+        meta: body.meta,
         projectURL: body.projectURL,
-        platform: body.platform,
-        imageURL: body.imageURL
+        imageURL: body.imageURL,
+        labels: body.labels
 
     });
 

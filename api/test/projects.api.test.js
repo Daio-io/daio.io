@@ -57,10 +57,10 @@ describe('Projects API Tests', function () {
             expect(data._id).to.exist;
             expect(data.name).to.eql(projectStub.name);
             expect(data.description).to.eql(projectStub.description);
+            expect(data.meta).to.eql(projectStub.meta);
             expect(data.projectURL).to.eql(projectStub.projectURL);
-            expect(data.platform).to.eql(projectStub.platform);
             expect(data.imageURL).to.eql(projectStub.imageURL);
-
+            expect(data.labels).to.eql(projectStub.labels);
             done();
 
 

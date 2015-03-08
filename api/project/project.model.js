@@ -5,9 +5,10 @@ var projectSchema = mongoose.Schema({
 
     name: { type: String, required: false },
     description: { type: String, required: false },
+    meta: { type: String, required: false },
     projectURL: { type: String, required: false },
-    platform: { type: String, required: false },
-    imageURL: String
+    imageURL: String,
+    labels: [String]
 
 });
 
