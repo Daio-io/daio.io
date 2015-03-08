@@ -1,9 +1,12 @@
 <h1 class="ui header">
     <i class="lab icon"></i>
+
     <div class="content">
         Projects
     </div>
 </h1>
-<div class="ui items">
-    {{> projectsection }}
+<div class="ui divided items">
+    {{#each projects}}
+        {{> projectItem this}}
+    {{/each}}
 </div>

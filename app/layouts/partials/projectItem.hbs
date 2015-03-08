@@ -1,0 +1,25 @@
+<div class="item">
+    <div class="image">
+        <img src="{{this.imageURL}}">
+    </div>
+    <div class="content">
+        <a>
+            <h1 href="" class="ui blue header">{{this.name}}</h1>
+        </a>
+        <div class="meta">
+            <span>{{this.meta}}</span>
+        </div>
+        <div class="description">
+            <p> {{this.description}} </p>
+        </div>
+        <div class="extra">
+            {{#each this.labels}}
+                <div class="ui green label">{{this}}</div>
+            {{/each}}
+            <a href="{{this.projectURL}}"
+               class="ui right floated blue button">
+                Download
+            </a>
+        </div>
+    </div>
+</div>
