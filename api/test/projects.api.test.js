@@ -86,7 +86,7 @@ describe('Projects API Tests', function () {
 
     });
     
-    it('should return failed if invalid data is sent', function (done) {
+    xit('should return failed if invalid data is sent', function (done) {
 
         req.post('/project', invalidStub).on('complete', function (data) {
 
