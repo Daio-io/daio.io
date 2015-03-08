@@ -4,10 +4,11 @@
   "description": "New website using io.js, Koa, Semantic UI and Handlebars",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "bash api/test/test-script.sh"
   },
   "engines": {
-    "iojs": "1.3.x"
+    "iojs": "1.5.x"
   },
   "repository": {
     "type": "git",

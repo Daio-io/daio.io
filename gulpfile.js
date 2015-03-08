@@ -3,6 +3,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var del = require('del');
 var list = require('gulp-list');
+var mocha = require('gulp-mocha');
 
 gulp.task('clean', function () {
     del([
@@ -21,6 +22,13 @@ gulp.task('bundle', ['clean'], function () {
         .bundle()
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('./public/js'))
+});
+
+gulp.task('api-tests', function () {
+    return gulp.src('api/test/*.test.js')
+        .pipe(mocha({
+            ui: 'bdd'
+        }));
 });
 
 gulp.task('default', ['help'], function () {});
