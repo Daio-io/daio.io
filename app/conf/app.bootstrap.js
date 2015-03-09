@@ -1,4 +1,5 @@
 var hbs = require('koa-handlebars');
+var hbsHelpers = require('../layouts/helpers/hbs.helpers');
 var settings = require('./app.settings');
 var koaBody = require('koa-body');
 var koaJson = require('koa-json');
@@ -11,10 +12,11 @@ module.exports = function (app) {
             viewsDir: 'app/layouts/views',
             partialsDir: 'app/layouts/partials',
             defaultLayout: 'main',
-            cache: settings.templateCache
+            cache: settings.templateCache,
+            helpers: hbsHelpers
         }
     ));
-    
+
     app.use(koaBody());
     app.use(koaJson());
 

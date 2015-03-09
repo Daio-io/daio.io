@@ -14,7 +14,8 @@
         </div>
         <div class="extra">
             {{#each this.labels}}
-                <div class="ui green label">{{this}}</div>
+                {<!-- add labels helper function -->}
+                {{addLabels}}
             {{/each}}
             <a href="{{this.projectURL}}"
                class="ui right floated blue button">
