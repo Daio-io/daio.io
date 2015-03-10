@@ -1,9 +1,30 @@
 'use strict';
+var BlogPosts = require('../../api/blog/blog.model');
 
-var blogPostHandlers = require('./blogposts.handlers');
-var router = require('koa-router')();
+exports.getBlog = function *() {
 
-router.get('/blog', blogPostHandlers.getBlog);
-router.get('/blog/:title', blogPostHandlers.getBlogByTitle);
+    let blogPosts = yield BlogPosts.find().exec();
 
-module.exports = router;
+    yield this.render("blog", {
+
+        title: 'Blog',
+        blogPosts: blogPosts
+
+    });
+
+};
+
+exports.getBlogByTitle = function *() {
+
+    let title = this.params.title;
+
+    let blogPost = yield BlogPosts.find(title).exec();
+
+    yield this.render("blogPost", {
+
+        title: 'Blog',
+        blogPosts: blogPost
+
+    });
+
+};
