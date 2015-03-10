@@ -1,0 +1,12 @@
+<h1 class="ui header">
+    <i class="code icon"></i>
+
+    <div class="content">
+        BlogPosts
+    </div>
+</h1>
+<div class="ui large feed">
+    {{#each blogPosts}}
+        {{> blogfeed this}}
+    {{/each}}
+</div>
