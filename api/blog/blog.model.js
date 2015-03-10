@@ -14,7 +14,7 @@ blogPostSchema.methods.getDateCreated = function () {
     var month = timeStamp.getUTCMonth() + 1; // Month starts at 0
     var year = timeStamp.getUTCFullYear();
 
-    return date + '-' + month + '-' + year;
+    return date + '/' + month + '/' + year;
 };
 
 var BlogPost = mongoose.model('BlogPost', blogPostSchema);
