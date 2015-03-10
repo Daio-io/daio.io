@@ -27,6 +27,18 @@ module.exports = {
 
         }
 
+    },
+
+    /**
+     * @name processHtml
+     * @function processHtml (Handlebars helper)
+     * @description allows input String to be processed as HTML by handlebars
+     * @returns {Handlebars.SafeString}
+     */
+    processHtml: function (htmlSnippet) {
+
+        return new Handlebars.SafeString(htmlSnippet);
+
     }
 
 };
