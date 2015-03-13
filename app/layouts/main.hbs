@@ -9,26 +9,30 @@
 </head>
 
 <body onload="timeColour.run('jumbotron')">
-
-<div id="content" class="ui page grid">
-    <div class="row">
-        <div class="column">
-            {{> header}}
+<div class="container">
+    <div class="header">
+        {{> header}}
+    </div>
+    <div id="body">
+        <div id="content" class="ui page grid">
+            <div class="row">
+                <div class="column">
+                    {{> jumbotron}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    {{{@body}}}
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="column">
-            {{> jumbotron}}
-        </div>
+    <div id="footer">
+        {{> footer}}
     </div>
-    <div class="row">
-        <div class="column">
-            {{{@body}}}
-        </div>
-    </div>
-
 </div>
 </body>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="/js/bundle.js"></script>
 </html>
