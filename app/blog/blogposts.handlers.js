@@ -3,7 +3,10 @@ var BlogPosts = require('../../api/blog/blog.model');
 
 exports.getBlog = function *() {
 
-    let blogPostsData = yield BlogPosts.find().exec();
+    let blogPostsData = yield BlogPosts.find()
+        .sort('-_id')
+        .limit(5)
+        .exec();
 
     let blogPosts = yield blogPostsData.map(function (found) {
 
