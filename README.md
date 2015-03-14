@@ -4,3 +4,5 @@
 
 
 # Daio.Io
+
+Now deployed to [Daio.IO](http://www.daio.io) but still in progress
