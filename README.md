@@ -5,4 +5,6 @@
 
 # Daio.Io
 
+Built with io.js using Koa.js, Mongoose, Handlebars and Semantic UI.
+
 Now deployed to [Daio.IO](http://www.daio.io) but still in progress
