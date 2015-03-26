@@ -106,7 +106,8 @@ describe('Projects API Tests', function () {
         req.delete('/project/' + fakeId).on('success', function (data) {
 
             expect(data).to.be.an('object');
-            expect(data.status).to.eql(1);
+            expect(data.status.ok).to.eql(1);
+            expect(data.status.n).to.eql(1);
             expect(data.message).to.exist;
 
             done();

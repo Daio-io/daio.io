@@ -104,7 +104,8 @@ describe('Blog API Tests', function () {
         req.delete('/blogpost/' + fakeId).on('success', function (data) {
 
             expect(data).to.be.an('object');
-            expect(data.status).to.eql(1);
+            expect(data.status.ok).to.eql(1);
+            expect(data.status.n).to.eql(1);
             expect(data.message).to.exist;
 
             done();
