@@ -1,5 +1,5 @@
 {
-  "name": "Daio.IO",
+  "name": "Daio.io",
   "version": "0.0.1",
   "description": "New website using io.js, Koa, Semantic UI and Handlebars",
   "main": "index.js",

@@ -7,7 +7,7 @@ exports.getProj = function *() {
 
     yield this.render("projects", {
 
-        title: 'Projects',
+        title: 'Daio.io Projects',
         projects: projects
 
     });

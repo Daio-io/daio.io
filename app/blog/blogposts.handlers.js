@@ -22,7 +22,7 @@ exports.getBlog = function *() {
 
     yield this.render("blog", {
 
-        title: 'Blog',
+        title: 'Daio.io Blog',
         blogPosts: blogPosts
 
     });
@@ -38,7 +38,7 @@ exports.getBlogByTitle = function *() {
 
     yield this.render("blogPost", {
 
-        title: 'Blog',
+        title: 'Daio.io Blog',
         blogPost: blogPost
 
     });
