@@ -4,8 +4,8 @@
 }
 
 .body {
-    padding:10px;
-    padding-bottom:50px;
+    padding: 10px 10px 50px;
+    background-color: #fffaf2;
 }
 .footer {
     position: relative;
@@ -15,5 +15,13 @@
 }
 
 .header {
-    padding:10px;
+    margin-top: 50px;
+}
+
+#jumbotron {
+    background-color: #fffaf2;
+}
+
+.container {
+    margin: 1rem;
 }
