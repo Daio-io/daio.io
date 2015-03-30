@@ -1,1 +1,24 @@
-<div>LOGIN!!</div>
+<div class="ui one column stackable center aligned page grid">
+    <div class="column twelve wide">
+        <h1 class="ui dividing header">Admin</h1>
+
+        <form action="/login" method="post" class="ui fluid form segment">
+            <div class="one field">
+                <div class="field">
+                    <label>Username:</label>
+                    <input type="text" name="username"/>
+                </div>
+            </div>
+            <div class="one field">
+
+                <div class="field">
+                    <label>Password:</label>
+                    <input type="password" name="password"/>
+                </div>
+            </div>
+            <div>
+                <input class="ui green button" type="submit" value="Log In"/>
+            </div>
+        </form>
+    </div>
+</div>
