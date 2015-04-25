@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "handlebars": "^3.0.0",
-    "koa": "^0.18.0",
+    "koa": "^0.19.0",
     "koa-body": "^1.1.0",
     "koa-handlebars": "^0.5.0",
     "koa-json": "^1.1.1",
