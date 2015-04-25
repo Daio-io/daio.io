@@ -1,6 +1,7 @@
 .container {
     min-height:100%;
     position:relative;
+    margin: 1rem;
 }
 
 .body {
@@ -20,8 +21,4 @@
 
 #jumbotron {
     background-color: #fffaf2;
-}
-
-.container {
-    margin: 1rem;
 }
