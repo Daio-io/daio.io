@@ -8,7 +8,7 @@
     "test": "bash api/test/test-script.sh"
   },
   "engines": {
-    "iojs": "2.2.x"
+    "iojs": "2.3.x"
   },
   "repository": {
     "type": "git",
