@@ -1,7 +1,7 @@
 'use strict';
 
-var adminHandlers = require('./admin.handlers');
-var router = require('koa-router')();
+const adminHandlers = require('./admin.handlers');
+const router = require('koa-router')();
 
 router.get('/admin', adminHandlers.getLoginPage);
 

@@ -1,7 +1,7 @@
 'use strict';
 
-var projectHandlers = require('./project.handlers');
-var router = require('koa-router')();
+const projectHandlers = require('./project.handlers');
+const router = require('koa-router')();
 
 router.post('/api/project', projectHandlers.postProject);
 router.get('/api/projects', projectHandlers.getProjects);

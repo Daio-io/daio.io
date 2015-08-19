@@ -1,10 +1,12 @@
-var hbs = require('koa-handlebars');
-var hbsHelpers = require('../layouts/helpers/hbs.helpers');
-var settings = require('./app.settings');
-var koaBody = require('koa-body');
-var koaJson = require('koa-json');
-var path = require('path');
-var staticCache = require('koa-static-cache');
+'use strict';
+
+const hbs = require('koa-handlebars');
+const hbsHelpers = require('../layouts/helpers/hbs.helpers');
+const settings = require('./app.settings');
+const koaBody = require('koa-body');
+const koaJson = require('koa-json');
+const path = require('path');
+const staticCache = require('koa-static-cache');
 
 module.exports = function (app) {
 

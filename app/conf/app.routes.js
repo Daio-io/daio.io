@@ -1,14 +1,14 @@
 'use strict';
 
 // ** PAGE ROUTERS ** //
-var homeRoutes = require('../home/home.router');
-var projPageRoutes = require('../projects/projects.router');
-var blogPageRoutes = require('../blog/blogposts.router');
-var adminPageRoutes = require('../admin/admin.router');
+const homeRoutes = require('../home/home.router');
+const projPageRoutes = require('../projects/projects.router');
+const blogPageRoutes = require('../blog/blogposts.router');
+const adminPageRoutes = require('../admin/admin.router');
 
 // ** API ROUTERS ** //
-var projectRoutes = require('../../api/project/project.router');
-var blogRoutes = require('../../api/blog/blog.router');
+const projectRoutes = require('../../api/project/project.router');
+const blogRoutes = require('../../api/blog/blog.router');
 
 module.exports = function (app) {
 

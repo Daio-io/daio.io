@@ -1,7 +1,7 @@
 'use strict';
 
-var mongoose = require('mongoose');
-var blogPostSchema = mongoose.Schema({
+const mongoose = require('mongoose');
+const blogPostSchema = mongoose.Schema({
 
     title: { type: String, required: false },
     short: { type: String },
@@ -9,14 +9,14 @@ var blogPostSchema = mongoose.Schema({
 });
 
 blogPostSchema.methods.getDateCreated = function () {
-    var timeStamp = this._id.getTimestamp();
-    var date = timeStamp.getUTCDate();
-    var month = timeStamp.getUTCMonth() + 1; // Month starts at 0
-    var year = timeStamp.getUTCFullYear();
+    let timeStamp = this._id.getTimestamp();
+    let date = timeStamp.getUTCDate();
+    let month = timeStamp.getUTCMonth() + 1; // Month starts at 0
+    let year = timeStamp.getUTCFullYear();
 
     return date + '/' + month + '/' + year;
 };
 
-var BlogPost = mongoose.model('BlogPost', blogPostSchema);
+const BlogPost = mongoose.model('BlogPost', blogPostSchema);
 
 module.exports = BlogPost;

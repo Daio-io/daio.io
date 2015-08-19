@@ -1,8 +1,10 @@
-var koa = require('koa');
-var app = koa();
-var http = require('http');
+'use strict'
 
-var settings = require('./app/conf/app.settings');
+const koa = require('koa');
+const app = koa();
+const http = require('http');
+
+const settings = require('./app/conf/app.settings');
 
 // Connect to DB
 require('./api/conf/db/db.setup')();
@@ -10,7 +12,9 @@ require('./api/conf/db/db.setup')();
 require('./app/conf/app.bootstrap')(app);
 require('./app/conf/app.routes')(app);
 
-http.createServer( app.callback()).listen(settings.port, function () {
+const server = http.createServer(app.callback());
+
+server.listen(settings.port, function () {
     console.log('Daio.io Started.. ');
 
 });

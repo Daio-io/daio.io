@@ -1,6 +1,6 @@
 'use strict';
 
-var BlogPost = require('./blog.model');
+const BlogPost = require('./blog.model');
 
 exports.getBlogPosts = function *() {
 

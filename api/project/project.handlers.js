@@ -1,6 +1,6 @@
 'use strict';
 
-var Project = require('./project.model');
+const Project = require('./project.model');
 
 exports.getProjects = function *() {
 

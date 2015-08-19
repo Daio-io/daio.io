@@ -1,7 +1,7 @@
 'use strict';
 
-var blogHandlers = require('./blog.handlers');
-var router = require('koa-router')();
+const blogHandlers = require('./blog.handlers');
+const router = require('koa-router')();
 
 router.post('/api/blogpost', blogHandlers.postBlog);
 router.get('/api/blogposts', blogHandlers.getBlogPosts);
