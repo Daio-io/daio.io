@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/Daveloper87/daio.io.svg)](https://travis-ci.org/Daveloper87/daio.io)
-[![Dependency Status](https://img.shields.io/david/Daveloper87/daio.io.svg)](https://david-dm.org/daveloper87/daio.io)
-[![devDependency Status](https://img.shields.io/david/dev/Daveloper87/daio.io.svg)](https://david-dm.org/daveloper87/daio.io#info=devDependencies)
+[![Build Status](https://travis-ci.org/Daio-io/daio.io.svg)](https://travis-ci.org/Daio-io/daio.io)
+[![Dependency Status](https://img.shields.io/david/Daio-io/daio.io.svg)](https://david-dm.org/Daio-io/daio.io)
+[![devDependency Status](https://img.shields.io/david/dev/Daio-io/daio.io.svg)](https://david-dm.org/Daio-io/daio.io#info=devDependencies)
 
 
 # Daio.io
