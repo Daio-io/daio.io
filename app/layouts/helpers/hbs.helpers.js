@@ -18,8 +18,12 @@ module.exports = {
 
             case 'ANDROID':
                 return new Handlebars.SafeString('<div class="ui green tag label">' + this + '</div>');
+            case 'IOS':
+                return new Handlebars.SafeString('<div class="ui black tag label">' + this + '</div>');
             case 'WEB':
                 return new Handlebars.SafeString('<div class="ui orange tag label">' + this + '</div>');
+            case 'GO':
+                return new Handlebars.SafeString('<div class="ui blue tag label">' + this + '</div>');
             case 'NODE':
                 return new Handlebars.SafeString('<div class="ui red tag label">' + this + '</div>');
             default:
