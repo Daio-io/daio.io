@@ -1,7 +1,7 @@
 'use strict'
 
 const koa = require('koa');
-const app = koa();
+const app = new koa();
 const http = require('http');
 
 const settings = require('./app/conf/app.settings');
